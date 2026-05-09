@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>なごNotion｜Notion、"使ってる"から"使えてる"へ。</title>
+  <meta name="description" content="名古屋・なごのキャンパス発、50分で“ひとつ作って帰れる”Notionワークショップ「なごNotion」。隔週・月3回ペース、参加費無料。" />
+  <meta property="og:title" content="なごNotion｜Notion、&quot;使ってる&quot;から&quot;使えてる&quot;へ。" />
+  <meta property="og:description" content="名古屋・なごのキャンパス発、50分で“ひとつ作って帰れる”Notionワークショップ。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1A1A1A',
+            sub: '#6B6B6B',
+            line: '#E5E5E5',
+            paper: '#FAFAFA',
+            accent: '#111111',
+            navy: '#2A4A8B',
+          },
+          fontFamily: {
+            sans: ['"Noto Sans JP"', '"ヒラギノ角ゴ ProN"', '"Yu Gothic UI"', 'sans-serif'],
+            en: ['Inter', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+          },
+          borderRadius: {
+            soft: '10px',
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-white text-ink font-sans leading-[1.7] antialiased">
+
+  <!-- ============================================================
+       ヘッダー（ロゴはプレースホルダ）
+       ============================================================ -->
+  <header class="border-b border-line">
+    <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+      <a href="#hero" class="flex items-center gap-2">
+        <!-- TODO: 差し替え（ロゴ画像） -->
+        <span class="font-en text-lg font-semibold tracking-tight">なごNotion</span>
+      </a>
+      <a href="#"
+         class="hidden text-sm font-medium text-navy underline-offset-4 hover:underline sm:inline-block">
+        <!-- TODO: 差し替え（Notion申込フォームURL） -->
+        申込みフォーム →
+      </a>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       1. ヒーロー
+       ============================================================ -->
+  <section id="hero" class="px-6 pb-20 pt-16 sm:pt-24">
+    <div class="mx-auto max-w-3xl text-center">
+      <!-- TODO: 差し替え（ヒーローロゴ・キービジュアル） -->
+      <p class="font-en text-sm tracking-[0.2em] text-sub">NAGO NOTION</p>
+
+      <h1 class="mt-6 text-[32px] font-bold leading-[1.4] sm:text-[40px]">
+        Notion、<br class="sm:hidden" />“使ってる”から<br />“使えてる”へ。
+      </h1>
+
+      <p class="mt-6 text-[15px] leading-[1.9] text-sub sm:text-base">
+        名古屋・なごのキャンパス発、<br class="sm:hidden" />
+        50分で“ひとつ作って帰れる”<br class="sm:hidden" />
+        Notionワークショップ。
+      </p>
+
+      <!-- 開催情報 -->
+      <dl class="mx-auto mt-10 grid max-w-md grid-cols-2 gap-y-3 border-y border-line py-6 text-left text-[14px]">
+        <dt class="text-sub">直近の日程</dt>
+        <!-- TODO: 差し替え（直近開催日） -->
+        <dd>YYYY/MM/DD（◯）HH:MM〜</dd>
+
+        <dt class="text-sub">会場</dt>
+        <dd>なごのキャンパス</dd>
+
+        <dt class="text-sub">時間</dt>
+        <dd>50分／回</dd>
+
+        <dt class="text-sub">参加費</dt>
+        <dd>無料</dd>
+      </dl>
+
+      <!-- ヒーロー直下CTA -->
+      <div class="mt-10">
+        <a href="#"
+           class="inline-flex items-center justify-center rounded-soft bg-navy px-8 py-4 text-[15px] font-semibold text-white transition hover:opacity-90">
+          <!-- TODO: 差し替え（Notion申込フォームURL） -->
+          この回に申し込む
+        </a>
+        <p class="mt-3 text-[12px] text-sub">※申込みフォーム（Notion）に遷移します</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       2. なごNotionとは（コンセプト＋ステップアップ図）
+       ============================================================ -->
+  <section id="about" class="border-t border-line bg-paper px-6 py-24">
+    <div class="mx-auto max-w-3xl">
+      <p class="font-en text-xs tracking-[0.2em] text-sub">ABOUT</p>
+      <h2 class="mt-3 text-[28px] font-bold leading-[1.4] sm:text-[32px]">なごNotionとは</h2>
+
+      <div class="mt-10 space-y-6 text-[15px] leading-[1.9] sm:text-base">
+        <p>
+          「なご」には3つの意味があります。<br />
+          ひとつは、<strong class="font-semibold">なごのキャンパス</strong>で開く Notion 勉強会だから。
+          ふたつめは、<strong class="font-semibold">和やか</strong>な雰囲気で、誰でも気軽に発言できる場でありたいから。
+          そしてもうひとつ、いちばん大切にしているのが<strong class="font-semibold">「名残（なごり）」</strong>です。
+        </p>
+        <p>
+          「名残」とは、物事が過ぎ去ったあとになお残り、それを思い起こさせるもの。
+          その場で楽しかったで終わらせず、会のあとも持ち帰り、現場で・実務で使い続けてもらえる学びを「残す」こと。
+          それが、なごNotionのコアバリューです。
+        </p>
+        <p>
+          Notion を「<strong class="font-semibold">使ってる</strong>」から「<strong class="font-semibold">使えてる</strong>」へ。
+          このひと押しを、毎回ひとつのテーマで一緒に積み上げていく場所です。
+        </p>
+      </div>
+
+      <!-- ステップアップ図 -->
+      <div class="mt-14">
+        <p class="text-center text-[12px] tracking-[0.15em] text-sub">— STEP UP —</p>
+        <div class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-7 sm:items-stretch sm:gap-0">
+          <!-- 1 知ってる -->
+          <div class="rounded-soft border border-line bg-white px-4 py-5 text-center sm:col-span-1 sm:py-6">
+            <p class="font-en text-[11px] tracking-[0.15em] text-sub">STEP 1</p>
+            <p class="mt-2 font-semibold">知ってる</p>
+          </div>
+          <div class="hidden items-center justify-center text-sub sm:flex">→</div>
+
+          <!-- 2 使ってる（現在地） -->
+          <div class="rounded-soft border border-ink bg-white px-4 py-5 text-center sm:col-span-1 sm:py-6">
+            <p class="font-en text-[11px] tracking-[0.15em] text-ink">STEP 2</p>
+            <p class="mt-2 font-semibold">使ってる</p>
+            <p class="mt-1 text-[11px] text-sub">← いまここ</p>
+          </div>
+          <div class="hidden items-center justify-center text-navy sm:flex">→</div>
+
+          <!-- 3 使えてる（到達点） -->
+          <div class="rounded-soft border border-navy bg-white px-4 py-5 text-center sm:col-span-1 sm:py-6">
+            <p class="font-en text-[11px] tracking-[0.15em] text-navy">STEP 3</p>
+            <p class="mt-2 font-semibold text-navy">使えてる</p>
+            <p class="mt-1 text-[11px] text-sub">← 到達点</p>
+          </div>
+          <div class="hidden items-center justify-center text-sub sm:flex">→</div>
+
+          <!-- 4 使いこなせてる -->
+          <div class="rounded-soft border border-line bg-white px-4 py-5 text-center sm:col-span-1 sm:py-6">
+            <p class="font-en text-[11px] tracking-[0.15em] text-sub">STEP 4</p>
+            <p class="mt-2 font-semibold">使いこなせてる</p>
+          </div>
+        </div>
+        <p class="mt-6 text-center text-[13px] text-sub">
+          なごNotion は、「使ってる」から「使えてる」への<strong class="font-semibold text-ink">橋渡し</strong>を担います。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. 3つの特徴
+       ============================================================ -->
+  <section id="features" class="border-t border-line px-6 py-24">
+    <div class="mx-auto max-w-4xl">
+      <p class="font-en text-xs tracking-[0.2em] text-sub">FEATURES</p>
+      <h2 class="mt-3 text-[28px] font-bold leading-[1.4] sm:text-[32px]">3つの特徴</h2>
+
+      <div class="mt-12 grid gap-6 sm:grid-cols-3">
+        <div class="border-t border-ink pt-6">
+          <p class="font-en text-sm font-semibold">01</p>
+          <h3 class="mt-2 text-[18px] font-bold sm:text-[20px]">毎回テーマ制</h3>
+          <p class="mt-3 text-[14px] leading-[1.9] text-sub">
+            その日のうちに「ひとつ作って」持ち帰れる。<br />
+            手ぶらで来ても、何かを残して帰れます。
+          </p>
+        </div>
+        <div class="border-t border-ink pt-6">
+          <p class="font-en text-sm font-semibold">02</p>
+          <h3 class="mt-2 text-[18px] font-bold sm:text-[20px]">オフライン主体</h3>
+          <p class="mt-3 text-[14px] leading-[1.9] text-sub">
+            その場で疑問をすぐ解決。<br />
+            画面を見せ合いながら一緒に詰まりを抜けていきます。
+          </p>
+        </div>
+        <div class="border-t border-ink pt-6">
+          <p class="font-en text-sm font-semibold">03</p>
+          <h3 class="mt-2 text-[18px] font-bold sm:text-[20px]">アーカイブ完備</h3>
+          <p class="mt-3 text-[14px] leading-[1.9] text-sub">
+            遠隔参加でも安心。<br />
+            参加できなかった回も、あとから振り返って学べます。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. こんな人におすすめ
+       ============================================================ -->
+  <section id="audience" class="border-t border-line bg-paper px-6 py-24">
+    <div class="mx-auto max-w-3xl">
+      <p class="font-en text-xs tracking-[0.2em] text-sub">FOR YOU</p>
+      <h2 class="mt-3 text-[28px] font-bold leading-[1.4] sm:text-[32px]">こんな人におすすめ</h2>
+      <p class="mt-4 text-[14px] text-sub">
+        名古屋近郊の20〜40代＋学生／職種不問／チーム参加歓迎。
+      </p>
+
+      <ul class="mt-10 divide-y divide-line border-y border-line">
+        <li class="flex items-start gap-4 py-5">
+          <span class="mt-1 font-en text-sm text-sub">01</span>
+          <p class="text-[15px]">Notion を触ってみたが、<strong class="font-semibold">使いこなせていない</strong>と感じている方</p>
+        </li>
+        <li class="flex items-start gap-4 py-5">
+          <span class="mt-1 font-en text-sm text-sub">02</span>
+          <p class="text-[15px]">Notion AI を<strong class="font-semibold">これから活用したい</strong>方</p>
+        </li>
+        <li class="flex items-start gap-4 py-5">
+          <span class="mt-1 font-en text-sm text-sub">03</span>
+          <p class="text-[15px]">他のAIサブスクが<strong class="font-semibold">増えすぎて迷子</strong>になっている方</p>
+        </li>
+        <li class="flex items-start gap-4 py-5">
+          <span class="mt-1 font-en text-sm text-sub">04</span>
+          <p class="text-[15px]">Notion を<strong class="font-semibold">仕事にしてみたい</strong>方</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. 当日の流れ（50分タイムテーブル）
+       ============================================================ -->
+  <section id="timetable" class="border-t border-line px-6 py-24">
+    <div class="mx-auto max-w-3xl">
+      <p class="font-en text-xs tracking-[0.2em] text-sub">TIMETABLE</p>
+      <h2 class="mt-3 text-[28px] font-bold leading-[1.4] sm:text-[32px]">当日の流れ</h2>
+      <p class="mt-4 text-[14px] text-sub">50分のなかで、その日のテーマを「ひとつ作って」帰っていただきます。</p>
+
+      <ol class="mt-10 space-y-0 border-t border-line">
+        <li class="flex flex-col gap-1 border-b border-line py-5 sm:flex-row sm:items-baseline sm:gap-6">
+          <span class="font-en text-sm font-semibold text-navy sm:w-24">00 - 05分</span>
+          <div>
+            <h3 class="text-[16px] font-semibold">オープニング</h3>
+            <p class="mt-1 text-[14px] text-sub">本日のテーマ／ゴールの共有</p>
+          </div>
+        </li>
+        <li class="flex flex-col gap-1 border-b border-line py-5 sm:flex-row sm:items-baseline sm:gap-6">
+          <span class="font-en text-sm font-semibold text-navy sm:w-24">05 - 15分</span>
+          <div>
+            <h3 class="text-[16px] font-semibold">ミニレクチャー</h3>
+            <p class="mt-1 text-[14px] text-sub">概念・操作のポイントを最短で押さえる</p>
+          </div>
+        </li>
+        <li class="flex flex-col gap-1 border-b border-line py-5 sm:flex-row sm:items-baseline sm:gap-6">
+          <span class="font-en text-sm font-semibold text-navy sm:w-24">15 - 40分</span>
+          <div>
+            <h3 class="text-[16px] font-semibold">ハンズオン</h3>
+            <p class="mt-1 text-[14px] text-sub">実際に手を動かして「ひとつ作る」</p>
+          </div>
+        </li>
+        <li class="flex flex-col gap-1 border-b border-line py-5 sm:flex-row sm:items-baseline sm:gap-6">
+          <span class="font-en text-sm font-semibold text-navy sm:w-24">40 - 50分</span>
+          <div>
+            <h3 class="text-[16px] font-semibold">共有・Q&amp;A</h3>
+            <p class="mt-1 text-[14px] text-sub">作ったものを見せ合い、疑問をその場で解消</p>
+          </div>
+        </li>
+      </ol>
+
+      <p class="mt-8 text-[14px]">
+        <a href="#" class="text-navy underline underline-offset-4 hover:opacity-80">
+          <!-- TODO: 差し替え（当日の流れ詳細Notionページ） -->
+          詳細はNotionページへ →
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. 直近のテーマ予告
+       ============================================================ -->
+  <section id="topics" class="border-t border-line bg-paper px-6 py-24">
+    <div class="mx-auto max-w-3xl">
+      <p class="font-en text-xs tracking-[0.2em] text-sub">TOPICS</p>
+      <h2 class="mt-3 text-[28px] font-bold leading-[1.4] sm:text-[32px]">直近のテーマ予告</h2>
+      <p class="mt-4 text-[14px] text-sub">毎回ひとつのテーマを掘り下げます。最新情報はNotionページで更新中。</p>
+
+      <ul class="mt-10 divide-y divide-line border-y border-line">
+        <li class="grid gap-1 py-5 sm:grid-cols-[140px_1fr] sm:gap-6">
+          <!-- TODO: 差し替え（開催日と回テーマ） -->
+          <span class="font-en text-sm text-sub">YYYY/MM/DD（◯）</span>
+          <p class="text-[15px] font-semibold">第◯回｜テーマ未定（差し替え）</p>
+        </li>
+        <li class="grid gap-1 py-5 sm:grid-cols-[140px_1fr] sm:gap-6">
+          <span class="font-en text-sm text-sub">YYYY/MM/DD（◯）</span>
+          <p class="text-[15px] font-semibold">第◯回｜テーマ未定（差し替え）</p>
+        </li>
+        <li class="grid gap-1 py-5 sm:grid-cols-[140px_1fr] sm:gap-6">
+          <span class="font-en text-sm text-sub">YYYY/MM/DD（◯）</span>
+          <p class="text-[15px] font-semibold">第◯回｜テーマ未定（差し替え）</p>
+        </li>
+      </ul>
+
+      <p class="mt-8 text-[14px]">
+        <a href="#" class="text-navy underline underline-offset-4 hover:opacity-80">
+          <!-- TODO: 差し替え（テーマ一覧Notionページ） -->
+          すべてのテーマを見る（Notion）→
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. 会場情報
+       ============================================================ -->
+  <section id="venue" class="border-t border-line px-6 py-24">
+    <div class="mx-auto max-w-3xl">
+      <p class="font-en text-xs tracking-[0.2em] text-sub">VENUE</p>
+      <h2 class="mt-3 text-[28px] font-bold leading-[1.4] sm:text-[32px]">会場情報</h2>
+
+      <div class="mt-10 space-y-2 text-[15px]">
+        <p class="font-semibold">なごのキャンパス</p>
+        <p class="text-sub">〒451-0042 愛知県名古屋市西区那古野2丁目14-1</p>
+      </div>
+
+      <!-- Googleマップ埋め込み -->
+      <div class="mt-6 overflow-hidden rounded-soft border border-line">
+        <iframe
+          src="https://www.google.com/maps?q=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E8%A5%BF%E5%8C%BA%E9%82%A3%E5%8F%A4%E9%87%8E2-14-1&output=embed"
+          width="100%" height="320" style="border:0;" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="なごのキャンパス Googleマップ"></iframe>
+      </div>
+
+      <!-- 注記（必須） -->
+      <p class="mt-6 rounded-soft border border-line bg-paper px-4 py-3 text-[13px] text-sub">
+        ※当会は会場として「なごのキャンパス」を利用していますが、<strong class="font-semibold text-ink">なごのキャンパス公式の主催・後援イベントではありません</strong>。
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       8. 主催者プロフィール
+       ============================================================ -->
+  <section id="host" class="border-t border-line bg-paper px-6 py-24">
+    <div class="mx-auto max-w-3xl">
+      <p class="font-en text-xs tracking-[0.2em] text-sub">HOST</p>
+      <h2 class="mt-3 text-[28px] font-bold leading-[1.4] sm:text-[32px]">主催者について</h2>
+
+      <div class="mt-10 grid gap-8 sm:grid-cols-[160px_1fr] sm:items-start">
+        <!-- TODO: 差し替え（主催者プロフィール写真） -->
+        <div class="aspect-square w-32 rounded-soft border border-line bg-white sm:w-40"></div>
+
+        <div class="space-y-3 text-[15px] leading-[1.9]">
+          <p class="font-semibold text-[18px]">森田 文弥（もりた ふみや）</p>
+          <p class="text-sub">ジョウホウソース株式会社 代表取締役</p>
+          <p>
+            PMO・業務設計を本業に、Notion 導入支援とITリテラシー研修を提供。
+            ココナラでも Notion 関連の相談に多数対応してきました。
+            「使えてる」を一緒につくる伴走者として、なごNotionを運営しています。
+          </p>
+          <p class="pt-2">
+            <a href="#" class="text-navy underline underline-offset-4 hover:opacity-80">
+              <!-- TODO: 差し替え（主催者プロフィールNotionページ） -->
+              詳しいプロフィールを見る（Notion）→
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       9. 過去アーカイブ
+       ============================================================ -->
+  <section id="archive" class="border-t border-line px-6 py-24">
+    <div class="mx-auto max-w-3xl">
+      <p class="font-en text-xs tracking-[0.2em] text-sub">ARCHIVE</p>
+      <h2 class="mt-3 text-[28px] font-bold leading-[1.4] sm:text-[32px]">過去アーカイブ</h2>
+      <p class="mt-4 text-[15px] leading-[1.9]">
+        過去の回で扱ったテーマ・資料・録画は、Notion でまとめて公開しています。
+        参加できなかった回も、ここから振り返って実務に活かせます。
+      </p>
+      <p class="mt-8 text-[14px]">
+        <a href="#" class="text-navy underline underline-offset-4 hover:opacity-80">
+          <!-- TODO: 差し替え（アーカイブ一覧Notionページ） -->
+          アーカイブを見る（Notion）→
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       10. 参加費・定員・持ち物
+       ============================================================ -->
+  <section id="info" class="border-t border-line bg-paper px-6 py-24">
+    <div class="mx-auto max-w-3xl">
+      <p class="font-en text-xs tracking-[0.2em] text-sub">INFO</p>
+      <h2 class="mt-3 text-[28px] font-bold leading-[1.4] sm:text-[32px]">参加費・定員・持ち物</h2>
+
+      <dl class="mt-10 divide-y divide-line border-y border-line">
+        <div class="grid gap-1 py-5 sm:grid-cols-[140px_1fr] sm:gap-6">
+          <dt class="text-sub">参加費</dt>
+          <dd class="text-[15px]">無料</dd>
+        </div>
+        <div class="grid gap-1 py-5 sm:grid-cols-[140px_1fr] sm:gap-6">
+          <dt class="text-sub">開催時間</dt>
+          <dd class="text-[15px]">50分／回</dd>
+        </div>
+        <div class="grid gap-1 py-5 sm:grid-cols-[140px_1fr] sm:gap-6">
+          <dt class="text-sub">頻度</dt>
+          <dd class="text-[15px]">隔週・月3回ペース</dd>
+        </div>
+        <div class="grid gap-1 py-5 sm:grid-cols-[140px_1fr] sm:gap-6">
+          <dt class="text-sub">定員</dt>
+          <!-- TODO: 差し替え（定員人数） -->
+          <dd class="text-[15px]">◯名（先着）</dd>
+        </div>
+        <div class="grid gap-1 py-5 sm:grid-cols-[140px_1fr] sm:gap-6">
+          <dt class="text-sub">持ち物</dt>
+          <dd class="text-[15px]">ノートPC（Notionにログインできる状態）</dd>
+        </div>
+        <div class="grid gap-1 py-5 sm:grid-cols-[140px_1fr] sm:gap-6">
+          <dt class="text-sub">対象</dt>
+          <dd class="text-[15px]">職種不問／チーム参加歓迎</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       11. FAQ
+       ============================================================ -->
+  <section id="faq" class="border-t border-line px-6 py-24">
+    <div class="mx-auto max-w-3xl">
+      <p class="font-en text-xs tracking-[0.2em] text-sub">FAQ</p>
+      <h2 class="mt-3 text-[28px] font-bold leading-[1.4] sm:text-[32px]">よくあるご質問</h2>
+
+      <div class="mt-10 divide-y divide-line border-y border-line">
+        <details class="group py-5">
+          <summary class="flex cursor-pointer items-start justify-between gap-4 text-[15px] font-semibold">
+            <span>Notion を始めたばかりでも参加できますか？</span>
+            <span class="font-en text-sub transition group-open:rotate-45">＋</span>
+          </summary>
+          <p class="mt-3 text-[14px] leading-[1.9] text-sub">
+            はい、歓迎です。アカウント作成済みであれば問題ありません。当日も冒頭で操作のポイントを共有します。
+          </p>
+        </details>
+        <details class="group py-5">
+          <summary class="flex cursor-pointer items-start justify-between gap-4 text-[15px] font-semibold">
+            <span>オンラインだけで参加してもいいですか？</span>
+            <span class="font-en text-sub transition group-open:rotate-45">＋</span>
+          </summary>
+          <p class="mt-3 text-[14px] leading-[1.9] text-sub">
+            可能です。オフライン主体ですが、遠方の方や予定が合わない方のためにオンライン併用＋アーカイブを用意しています。
+          </p>
+        </details>
+        <details class="group py-5">
+          <summary class="flex cursor-pointer items-start justify-between gap-4 text-[15px] font-semibold">
+            <span>持ち物は何が必要ですか？</span>
+            <span class="font-en text-sub transition group-open:rotate-45">＋</span>
+          </summary>
+          <p class="mt-3 text-[14px] leading-[1.9] text-sub">
+            ノートPCをご持参ください。Notion にログインできる状態でお越しいただくとスムーズです。
+          </p>
+        </details>
+        <details class="group py-5">
+          <summary class="flex cursor-pointer items-start justify-between gap-4 text-[15px] font-semibold">
+            <span>欠席した回の内容は確認できますか？</span>
+            <span class="font-en text-sub transition group-open:rotate-45">＋</span>
+          </summary>
+          <p class="mt-3 text-[14px] leading-[1.9] text-sub">
+            アーカイブとしてNotionに残しています。後日、復習や実務への落とし込みに使ってください。
+          </p>
+        </details>
+        <details class="group py-5">
+          <summary class="flex cursor-pointer items-start justify-between gap-4 text-[15px] font-semibold">
+            <span>チームでまとめて参加できますか？</span>
+            <span class="font-en text-sub transition group-open:rotate-45">＋</span>
+          </summary>
+          <p class="mt-3 text-[14px] leading-[1.9] text-sub">
+            歓迎しています。社内導入の足掛かりとしてご活用いただいているケースもあります。お気軽にご相談ください。
+          </p>
+        </details>
+        <details class="group py-5">
+          <summary class="flex cursor-pointer items-start justify-between gap-4 text-[15px] font-semibold">
+            <span>「なごのキャンパス」の主催イベントですか？</span>
+            <span class="font-en text-sub transition group-open:rotate-45">＋</span>
+          </summary>
+          <p class="mt-3 text-[14px] leading-[1.9] text-sub">
+            いいえ。会場として「なごのキャンパス」を利用していますが、<strong class="font-semibold text-ink">なごのキャンパス公式の主催・後援イベントではありません</strong>。運営はジョウホウソース株式会社が行っています。
+          </p>
+        </details>
+        <details class="group py-5">
+          <summary class="flex cursor-pointer items-start justify-between gap-4 text-[15px] font-semibold">
+            <span>申込みはどこからですか？</span>
+            <span class="font-en text-sub transition group-open:rotate-45">＋</span>
+          </summary>
+          <p class="mt-3 text-[14px] leading-[1.9] text-sub">
+            ページ最下部のCTAボタン、もしくはヒーロー直下の申込ボタンから Notion フォームへお進みください。
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       12. 最終CTA
+       ============================================================ -->
+  <section id="cta" class="border-t border-line bg-white px-6 py-24">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-[28px] font-bold leading-[1.4] sm:text-[32px]">
+        その日のうちに、<br />
+        ひとつ作って帰ろう。
+      </h2>
+      <p class="mt-6 text-[15px] leading-[1.9] text-sub">
+        次回の「なごNotion」に、お気軽にどうぞ。
+      </p>
+
+      <div class="mt-10">
+        <a href="#"
+           class="inline-flex items-center justify-center rounded-soft bg-navy px-10 py-4 text-[15px] font-semibold text-white transition hover:opacity-90">
+          <!-- TODO: 差し替え（Notion申込フォームURL） -->
+          申込みフォームへ
+        </a>
+        <p class="mt-3 text-[12px] text-sub">※申込みフォーム（Notion）に遷移します</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       13. フッター
+       ============================================================ -->
+  <footer class="border-t border-line bg-paper px-6 py-16">
+    <div class="mx-auto max-w-5xl">
+      <div class="grid gap-10 sm:grid-cols-2">
+        <div>
+          <p class="font-en text-sm font-semibold tracking-tight">なごNotion</p>
+          <p class="mt-3 text-[13px] leading-[1.9] text-sub">
+            運営：ジョウホウソース株式会社<br />
+            〒451-0042 愛知県名古屋市西区那古野2丁目14-1 なごのキャンパス<br />
+            代表：森田 文弥<br />
+            お問い合わせ：
+            <a href="mailto:fumiya.morita@johosauce.com" class="text-navy underline underline-offset-4 hover:opacity-80">
+              fumiya.morita@johosauce.com
+            </a>
+          </p>
+        </div>
+        <div class="text-[13px] leading-[1.9] text-sub">
+          <p>
+            ※当会は会場として「なごのキャンパス」を利用していますが、<strong class="font-semibold text-ink">なごのキャンパス公式の主催・後援イベントではありません</strong>。
+          </p>
+          <p class="mt-4">
+            <a href="https://johosauce.com" class="text-navy underline underline-offset-4 hover:opacity-80" target="_blank" rel="noopener">
+              ジョウホウソース株式会社 公式サイト →
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <p class="mt-12 font-en text-[12px] text-sub">© <span id="year"></span> Johosauce, Inc.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

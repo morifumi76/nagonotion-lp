@@ -1,0 +1,31 @@
+/*
+ * style.css
+ * なごNotion LP のごく軽い補助スタイル。
+ * 基本のスタイリングは Tailwind CDN（index.html 内の <script>）に集約しています。
+ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* リンクのフォーカスリング（アクセシビリティ向上） */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #2A4A8B;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* FAQ summaryのデフォルトマーカーを消す（Tailwindでは消せないSafari対策） */
+summary::-webkit-details-marker {
+  display: none;
+}
+summary {
+  list-style: none;
+}

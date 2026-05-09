@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# 環境変数・秘密情報
+.env
+.env.*
+!.env.example
+
+# 依存・ビルド成果物
+node_modules/
+dist/
+build/
+
+# エディタ
+.vscode/
+.idea/
+*.swp
+
+# Vercel
+.vercel/
+
+# Claude Code ローカル設定
+.claude/settings.local.json
