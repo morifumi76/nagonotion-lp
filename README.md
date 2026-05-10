@@ -27,13 +27,14 @@ Notion勉強ワークショップ「なごNotion」の集客LPです。スマホ
 - 主催者プロフィール写真：`assets/fumiya-morita-profile.png` と主催者プロフィール内の `.profile-photo`。
 - キャラクター吹き出し：`index.html` の `.character-callout`。動きは `assets/characters/animated/` のCSSスプライト。
 - 直近日程：ヒーロー内の `近日公開`。
+- 開催頻度：ヒーロー右側の `月2回`。
 - Notion申込フォームURL：ヒーローCTA、最終CTA。現在は `https://johosauce.notion.site/Notion-35b64d2aa0e880018871ee3bc3197c03?pvs=74`。
 - 当日の流れNotionページURL：当日の流れセクション。現在は `https://www.notion.so/morifumi76/35b64d2aa0e8805ebad8ffd1bedcbe46`。
 - 直近テーマNotionページURL：直近のテーマ予告セクション。現在は `https://www.notion.so/morifumi76/35b64d2aa0e8805ebad8ffd1bedcbe46`。
 - 主催者プロフィールNotionページURL：主催者プロフィールセクション。現在は `https://johosauce.notion.site`。
 - 過去アーカイブNotionページURL：過去アーカイブセクション。現在は `https://johosauce.notion.site/35b64d2aa0e88037b3c5eefbaf966eec?pvs=74`。
 - 定員：参加費・定員・持ち物セクションの `各回少人数制予定`。
-- 所在地・連絡先：フッターの `所在地：愛知県名古屋市`、`連絡先：後日掲載`。
+- 所在地・連絡先：フッターの所在地と問い合わせリンク。現在の問い合わせ先は `https://johosauce.notion.site/27c64d2aa0e8802ba7a3c70435788fca`。
 
 ## Googleマップ
 

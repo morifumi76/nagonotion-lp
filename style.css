@@ -158,6 +158,10 @@ iframe {
   text-transform: uppercase;
 }
 
+.section-kicker {
+  display: none;
+}
+
 h1 {
   max-width: 13em;
   font-size: clamp(2rem, 9vw, 2.5rem);
@@ -171,7 +175,7 @@ h1 {
 }
 
 h2 {
-  margin-top: 10px;
+  margin-top: 0;
   font-size: clamp(1.75rem, 6vw, 2rem);
   font-weight: 700;
   line-height: 1.35;
@@ -440,7 +444,7 @@ h3 {
 .character-callout-reverse .character-sprite {
   grid-column: 2;
   grid-row: 1;
-  transform: scaleX(-1);
+  --character-scale-x: -1;
 }
 
 .character-callout-reverse p {
@@ -449,15 +453,19 @@ h3 {
 }
 
 .character-sprite {
+  --character-scale-x: 1;
   display: block;
   width: 76px;
   height: 82px;
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 304px 82px;
+  transform: scaleX(var(--character-scale-x));
+  transform-origin: center bottom;
 }
 
 .character-morifumi {
+  --character-scale-x: 0.88;
   background-image: url("assets/characters/animated/morifumi-waving.png");
   animation: sprite-4 1.4s step-end infinite;
 }
@@ -808,6 +816,8 @@ h3 {
 .footer-grid {
   display: grid;
   gap: 20px;
+  justify-items: end;
+  text-align: right;
 }
 
 .footer-brand {
@@ -818,6 +828,12 @@ h3 {
 
 address {
   font-style: normal;
+}
+
+address a {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 @media (min-width: 640px) {
@@ -834,8 +850,7 @@ address {
   }
 
   .link-panel,
-  .info-grid,
-  .footer-grid {
+  .info-grid {
     grid-template-columns: 1fr auto;
   }
 }
