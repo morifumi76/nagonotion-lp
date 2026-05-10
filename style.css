@@ -816,8 +816,8 @@ h3 {
 .footer-grid {
   display: grid;
   gap: 20px;
-  justify-items: end;
-  text-align: right;
+  justify-items: start;
+  text-align: left;
 }
 
 .footer-brand {
