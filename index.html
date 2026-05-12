@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+JP:wght@400;500;600;700&amp;family=Noto+Serif+JP:wght@500;600&amp;display=swap"
       rel="stylesheet"
     >
     <link rel="icon" href="assets/nago-notion-icon.svg" type="image/svg+xml">
@@ -49,63 +49,41 @@
       <section class="hero section">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">名古屋対面でNotion学ぶなら「なごNotion」</p>
-            <h1>
-              Notion、<br>
-              <span class="no-break">&quot;使ってる&quot;から</span><br>
-              <span class="no-break">&quot;使えてる&quot;へ。</span>
+            <h1 class="hero__headline">
+              <span class="hero__headline-sub">名古屋対面で</span>
+              <span class="hero__headline-sub">Notionを学ぶなら</span>
+              <span class="hero__headline-rule" aria-hidden="true"></span>
+              <span class="hero__headline-brand">なごNotion</span>
             </h1>
-            <p class="hero-lead">
-              名古屋駅から徒歩7分、なごのキャンパスを活動拠点とした対面で学べるNotionのワークショップ。
+            <p class="hero__lede">
+              名古屋駅から徒歩7分、なごのキャンパスを活動拠点とした<br>
+              対面で学べるNotionのワークショップ。
             </p>
-            <div class="event-summary">
+            <dl class="hero__meta">
               <div>
-                <span>直近日程</span>
+                <dt>直近日程</dt>
                 <!-- ここを差し替え：直近日程 -->
-                <strong>近日公開</strong>
+                <dd>近日公開</dd>
               </div>
               <div>
-                <span>会場</span>
-                <strong>なごのキャンパス</strong>
+                <dt>会場</dt>
+                <dd>なごのキャンパス</dd>
               </div>
               <div>
-                <span>時間</span>
-                <strong>50分</strong>
+                <dt>時間</dt>
+                <dd>50分</dd>
               </div>
               <div>
-                <span>参加費</span>
-                <strong>無料</strong>
-              </div>
-            </div>
-            <!-- ここを差し替え：Notion申込フォームURL -->
-            <a class="button button-primary hero-cta" href="https://johosauce.notion.site/Notion-35b64d2aa0e880018871ee3bc3197c03?pvs=74" target="_blank" rel="noopener">申し込む</a>
-          </div>
-
-          <aside class="hero-panel" aria-labelledby="workshop-summary-title">
-            <p class="panel-label" id="workshop-summary-title">ワークショップ</p>
-            <!-- ここを差し替え：ワークショップ写真 -->
-            <img
-              class="photo-slot"
-              src="assets/workshop-venue.jpg"
-              alt="なごのキャンパスのワークショップ会場"
-              width="2400"
-              height="1601"
-            >
-            <dl>
-              <div>
-                <dt>形式</dt>
-                <dd>オフライン主体＋オンライン併用</dd>
-              </div>
-              <div>
-                <dt>頻度</dt>
-                <dd>月2回</dd>
-              </div>
-              <div>
-                <dt>主催</dt>
-                <dd>ジョウホウソース株式会社</dd>
+                <dt>参加費</dt>
+                <dd>無料</dd>
               </div>
             </dl>
-          </aside>
+            <!-- ここを差し替え：Notion申込フォームURL -->
+            <a class="hero__cta" href="https://johosauce.notion.site/Notion-35b64d2aa0e880018871ee3bc3197c03?pvs=74" target="_blank" rel="noopener">
+              <span>申し込む</span>
+              <span class="hero__cta-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -114,22 +92,8 @@
           <p class="section-kicker">コンセプト</p>
           <h2>なごNotionとは</h2>
           <p>
-            なごNotionは、Notionを「触ったことはある」「自分なりに使っている」状態から、仕事や学びの中で自然に「使えてる」と言える状態へ橋渡しするワークショップです。
+            なごNotionは、Notionを「知っている」「触っている」だけで終わらせず、自分なりに使っている状態から、仕事や学びの中で自然に「使えてる」と言える状態へ橋渡しする50分の対面ワークショップです。
           </p>
-          <div class="nago-meaning">
-            <h3>「なご」には、3つの意味があります。</h3>
-            <p>ひとつは、なごのキャンパスを拠点とした、Notionの勉強会だから。</p>
-            <p>ひとつは、和やかな雰囲気で、誰でも気軽に参加し発言しやすい場でありたいから。</p>
-            <p>
-              そして、いちばん大切にしているのは「名残（なごり）」。物事が過ぎ去ったあとに、なお残るもの。
-            </p>
-            <p>
-              その場限りで終わらせない。会が終わった後も、現場で、実務で、ずっと使い続けられる。
-              持ち帰った&quot;ひとつ&quot;が、あなたの仕事に名残として根付いていく。
-            </p>
-            <p>その日だけの楽しさよりも、明日からの仕事を変える学びを。</p>
-            <p>なごNotionは、そんな会です。</p>
-          </div>
         </div>
 
         <div class="container">
@@ -159,7 +123,7 @@
 
           <div id="voices" class="character-callout character-callout-inline">
             <span class="character-sprite character-morifumi" role="img" aria-label="モリフミ"></span>
-            <p>つまり、50分で「ひとつ作る」会です。</p>
+            <p>和やかなごNotion〜♪</p>
           </div>
         </div>
       </section>
@@ -183,8 +147,8 @@
             </article>
             <article class="feature-card">
               <span>03</span>
-              <h3>アーカイブ完備</h3>
-              <p>遠隔参加や復習にも使えるアーカイブを用意し、参加後の学び直しを支えます。</p>
+              <h3>無料で実施</h3>
+              <p>まずは気軽に試せるよう、参加費は無料で実施します。</p>
             </article>
           </div>
         <div class="character-callout character-callout-reverse">
@@ -218,64 +182,10 @@
               <p>個人利用から、支援・設計・チーム導入へ広げる視点を得られます。</p>
             </article>
           </div>
-        </div>
-      </section>
-
-      <section class="section section-muted">
-        <div class="container split">
-          <div class="section-heading">
-            <p class="section-kicker">当日の流れ</p>
-            <h2>当日の流れ</h2>
-            <p>50分で、説明を聞くだけで終わらず、自分の手元に小さな成果物を残します。</p>
-            <!-- ここを差し替え：当日の流れNotionページURL -->
-            <a class="text-link" href="https://johosauce.notion.site/35b64d2aa0e8805ebad8ffd1bedcbe46" target="_blank" rel="noopener">詳細をNotionで見る</a>
+          <div class="character-callout">
+            <span class="character-sprite character-parker" role="img" aria-label="パーカー"></span>
+            <p>せっかくお金払ってるなら有効活用したい！</p>
           </div>
-          <ol class="timeline">
-            <li>
-              <time>0〜5分</time>
-              <div>
-                <h3>チェックイン</h3>
-                <p>テーマと今日作るものを確認します。</p>
-              </div>
-            </li>
-            <li>
-              <time>5〜15分</time>
-              <div>
-                <h3>ミニレクチャー</h3>
-                <p>考え方と操作の要点を短く共有します。</p>
-              </div>
-            </li>
-            <li>
-              <time>15〜40分</time>
-              <div>
-                <h3>制作ワーク</h3>
-                <p>手を動かしながら、各自のページや仕組みを作ります。</p>
-              </div>
-            </li>
-            <li>
-              <time>40〜50分</time>
-              <div>
-                <h3>共有と次の一歩</h3>
-                <p>詰まった点を解消し、持ち帰って試すことを整理します。</p>
-              </div>
-            </li>
-          </ol>
-        <div class="character-callout">
-          <span class="character-sprite character-parker" role="img" aria-label="パーカー"></span>
-          <p>実際に使えるものが作れるのは嬉しい</p>
-        </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container link-panel">
-          <div>
-            <p class="section-kicker">テーマ予告</p>
-            <h2>直近のテーマ予告</h2>
-            <p>開催ごとのテーマ、持ち物、オンライン参加方法はNotionページで更新します。</p>
-          </div>
-          <!-- ここを差し替え：直近テーマNotionページURL -->
-          <a class="button button-outline" href="https://www.notion.so/morifumi76/35b64d2aa0e8805ebad8ffd1bedcbe46" target="_blank" rel="noopener">テーマ予告を見る</a>
         </div>
       </section>
 
@@ -286,23 +196,30 @@
             <h2>会場情報</h2>
             <p>
               なごのキャンパス<br>
-              愛知県名古屋市西区那古野2丁目14-1
+              愛知県名古屋市西区那古野2丁目14-1<br>
+              部屋については人数に合わせて別途連絡します。
             </p>
           </div>
-          <div class="map-wrap">
-            <iframe
-              title="なごのキャンパス周辺のGoogleマップ"
-              src="https://maps.google.com/maps?q=%E3%81%AA%E3%81%94%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%91%E3%82%B9%20%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E8%A5%BF%E5%8C%BA%E9%82%A3%E5%8F%A4%E9%87%8E2%E4%B8%81%E7%9B%AE14-1&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-            <a
-              class="map-link"
-              href="https://www.google.com/maps/search/?api=1&query=%E3%81%AA%E3%81%94%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%91%E3%82%B9%20%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E8%A5%BF%E5%8C%BA%E9%82%A3%E5%8F%A4%E9%87%8E2%E4%B8%81%E7%9B%AE14-1"
-              target="_blank"
-              rel="noopener"
-              >Googleマップで開く</a
-            >
+          <div class="venue-media">
+            <div class="venue-photo-grid" role="group" aria-label="会場写真">
+              <img src="assets/venue-room-small.jpg" alt="なごのキャンパスの少人数向けワークショップ部屋" width="556" height="478" loading="lazy">
+              <img src="assets/venue-room-large.jpg" alt="なごのキャンパスの広めのワークショップ部屋" width="665" height="502" loading="lazy">
+            </div>
+            <div class="map-wrap">
+              <iframe
+                title="なごのキャンパス周辺のGoogleマップ"
+                src="https://maps.google.com/maps?q=%E3%81%AA%E3%81%94%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%91%E3%82%B9%20%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E8%A5%BF%E5%8C%BA%E9%82%A3%E5%8F%A4%E9%87%8E2%E4%B8%81%E7%9B%AE14-1&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <a
+                class="map-link"
+                href="https://www.google.com/maps/search/?api=1&query=%E3%81%AA%E3%81%94%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%91%E3%82%B9%20%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E8%A5%BF%E5%8C%BA%E9%82%A3%E5%8F%A4%E9%87%8E2%E4%B8%81%E7%9B%AE14-1"
+                target="_blank"
+                rel="noopener"
+                >Googleマップで開く</a
+              >
+            </div>
           </div>
         </div>
       </section>
@@ -341,20 +258,8 @@
       </section>
 
       <section class="section section-muted">
-        <div class="container link-panel">
-          <div>
-            <p class="section-kicker">アーカイブ</p>
-            <h2>過去アーカイブ</h2>
-            <p>過去回のテーマ、資料、振り返りはNotionページにまとめていきます。</p>
-          </div>
-          <!-- ここを差し替え：過去アーカイブNotionページURL -->
-          <a class="button button-outline" href="https://johosauce.notion.site/35b64d2aa0e88037b3c5eefbaf966eec?pvs=74" target="_blank" rel="noopener">アーカイブを見る</a>
-        </div>
-      </section>
-
-      <section class="section">
         <div class="container info-grid">
-          <div>
+          <div class="section-heading">
             <p class="section-kicker">参加情報</p>
             <h2>参加費・定員・持ち物</h2>
           </div>
@@ -390,10 +295,12 @@
         </div>
       </section>
 
-      <section id="faq" class="section section-muted">
-        <div class="container narrow">
-          <p class="section-kicker">よくある質問</p>
-          <h2>よくある質問</h2>
+      <section id="faq" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">よくある質問</p>
+            <h2>よくある質問</h2>
+          </div>
           <div class="faq-list">
             <details>
               <summary>Notion初心者でも参加できますか？</summary>
@@ -419,15 +326,11 @@
               <summary>必要な持ち物はありますか？</summary>
               <p>Notionにログインできる端末をご用意ください。PCでの参加をおすすめします。</p>
             </details>
-            <details>
-              <summary>アーカイブだけ見ることはできますか？</summary>
-              <p>過去アーカイブの公開範囲は回ごとに調整します。詳細はアーカイブ用Notionページで案内します。</p>
-            </details>
           </div>
         </div>
       </section>
 
-      <section class="section final-cta">
+      <section class="section section-muted final-cta">
         <div class="container narrow">
           <p class="section-kicker">申込</p>
           <h2>50分で、Notionにひとつ確かな使い道を。</h2>
