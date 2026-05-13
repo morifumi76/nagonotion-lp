@@ -149,12 +149,6 @@ iframe {
   font-size: 16px;
 }
 
-.logo-illustration {
-  width: auto;
-  height: 22px;
-  object-fit: contain;
-}
-
 .page-nav {
   display: none;
   align-items: center;
@@ -369,6 +363,12 @@ h3 {
   border-color: var(--color-sumi);
   background: var(--color-sumi);
   transform: translateY(-1px);
+}
+
+.hero__illustration {
+  width: min(100%, 560px);
+  height: auto;
+  margin-top: 34px;
 }
 
 .button {
