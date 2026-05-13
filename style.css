@@ -141,12 +141,18 @@ iframe {
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-weight: 700;
 }
 
 .logo-text {
   font-size: 16px;
+}
+
+.logo-illustration {
+  width: auto;
+  height: 22px;
+  object-fit: contain;
 }
 
 .page-nav {
