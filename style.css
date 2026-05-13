@@ -846,10 +846,11 @@ address a:hover {
 
 .venue-photo-grid img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 240px;
   border: 1px solid var(--color-line);
   border-radius: var(--radius);
   object-fit: cover;
+  object-position: center;
   background: var(--color-kinari);
 }
 
@@ -1094,6 +1095,10 @@ address a {
 
   .venue-photo-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .venue-photo-grid img {
+    height: clamp(220px, 24vw, 300px);
   }
 
   .link-panel,
