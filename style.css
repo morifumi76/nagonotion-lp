@@ -149,6 +149,42 @@ iframe {
   font-size: 16px;
 }
 
+.page-nav {
+  display: none;
+  align-items: center;
+  gap: 22px;
+  color: var(--color-text-body);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.page-nav a {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.page-nav a:hover {
+  color: var(--color-sumi);
+}
+
+.page-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 16px;
+  border: 1px solid var(--color-shu-soft);
+  border-radius: var(--radius-pill);
+  color: var(--color-sumi);
+}
+
+.page-nav__cta:hover {
+  border-color: var(--color-shu);
+  background: rgba(178, 58, 44, 0.08);
+}
+
 .company-link {
   display: inline-flex;
   align-items: center;
@@ -327,14 +363,6 @@ h3 {
   border-color: var(--color-sumi);
   background: var(--color-sumi);
   transform: translateY(-1px);
-}
-
-.hero__cta-arrow {
-  transition: transform 0.2s ease;
-}
-
-.hero__cta:hover .hero__cta-arrow {
-  transform: translateX(2px);
 }
 
 .button {
@@ -1157,6 +1185,12 @@ address a {
     width: 112px;
     height: 96px;
     margin: 0 0 14px 24px;
+  }
+}
+
+@media (min-width: 920px) {
+  .page-nav {
+    display: flex;
   }
 }
 
