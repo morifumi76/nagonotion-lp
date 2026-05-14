@@ -432,11 +432,11 @@ h3 {
   z-index: 2;
   width: 100%;
   height: auto;
-  clip-path: inset(0 82% 0 0);
-  opacity: 0.58;
+  clip-path: inset(0 80% 0 0);
+  opacity: 0.78;
   pointer-events: none;
-  transform-origin: 8% 82%;
-  animation: bamboo-breeze 5.8s ease-in-out infinite;
+  transform-origin: 5% 86%;
+  animation: bamboo-breeze 3.8s ease-in-out infinite;
 }
 
 .hero-steam {
@@ -861,15 +861,15 @@ h3 {
 @keyframes bamboo-breeze {
   0%,
   100% {
-    transform: rotate(0deg) skewX(0deg);
+    transform: translateX(0) rotate(0deg) skewX(0deg);
   }
 
-  45% {
-    transform: rotate(0.55deg) skewX(0.7deg);
+  35% {
+    transform: translateX(3px) rotate(1.4deg) skewX(1.6deg);
   }
 
-  70% {
-    transform: rotate(-0.25deg) skewX(-0.35deg);
+  68% {
+    transform: translateX(-2px) rotate(-0.9deg) skewX(-1deg);
   }
 }
 
