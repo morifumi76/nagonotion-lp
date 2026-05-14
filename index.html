@@ -57,13 +57,18 @@
               名古屋駅から徒歩8分。なごのキャンパスを活動拠点とした<br>
               対面で学べるNotionのワークショップ。
             </p>
-            <img
-              class="hero__illustration"
-              src="assets/nagoyaka-nago-notion.svg"
-              alt="なごNotionのキャラクターたちが和やかに過ごしているイラスト"
-              width="2172"
-              height="724"
-            >
+            <div class="hero-visual">
+              <span class="hero-steam hero-steam-1" aria-hidden="true"></span>
+              <span class="hero-steam hero-steam-2" aria-hidden="true"></span>
+              <span class="hero-steam hero-steam-3" aria-hidden="true"></span>
+              <img
+                class="hero__illustration"
+                src="assets/nagoyaka-nago-notion.svg"
+                alt="なごNotionのキャラクターたちが和やかに過ごしているイラスト"
+                width="2172"
+                height="724"
+              >
+            </div>
             <dl class="hero__meta">
               <div>
                 <dt>直近日程</dt>
@@ -365,5 +370,39 @@
         <p class="footer-copy">©2026 Joho Sauce Inc.</p>
       </div>
     </footer>
+    <script>
+      const revealItems = document.querySelectorAll(".section:not(.hero), .feature-card, .recommend-list article, .profile-card, .detail-list div, .faq-list details");
+
+      revealItems.forEach((item) => {
+        item.classList.add("reveal");
+      });
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.14 });
+
+        revealItems.forEach((item) => observer.observe(item));
+      } else {
+        revealItems.forEach((item) => item.classList.add("is-visible"));
+      }
+
+      document.querySelectorAll(".faq-list details").forEach((detail) => {
+        detail.addEventListener("toggle", () => {
+          if (!detail.open) return;
+
+          detail.parentElement.querySelectorAll("details[open]").forEach((openDetail) => {
+            if (openDetail !== detail) {
+              openDetail.open = false;
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
