@@ -1264,6 +1264,12 @@ address a:hover {
   font-size: 14px;
 }
 
+.footer-copy a:hover {
+  color: var(--color-sumi);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 address {
   font-style: normal;
   line-height: 1.65;
