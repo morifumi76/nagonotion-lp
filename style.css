@@ -420,7 +420,7 @@ h3 {
 
 .hero-visual {
   position: relative;
-  width: min(100%, 560px);
+  width: min(100%, 540px);
   margin-top: 34px;
   margin-bottom: 10px;
   opacity: 0;
@@ -428,11 +428,30 @@ h3 {
   animation: hero-visual-in 0.9s ease 0.18s forwards;
 }
 
+.hero-visual::after {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, var(--color-bg) 0%, rgba(250, 247, 240, 0) 10%, rgba(250, 247, 240, 0) 90%, var(--color-bg) 100%),
+    linear-gradient(180deg, rgba(250, 247, 240, 0.56) 0%, rgba(250, 247, 240, 0) 10%);
+  content: "";
+}
+
 .hero__illustration {
   position: relative;
   z-index: 1;
   width: 100%;
   height: auto;
+  -webkit-mask-image:
+    linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%),
+    linear-gradient(180deg, transparent 0%, #000 8%, #000 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%),
+    linear-gradient(180deg, transparent 0%, #000 8%, #000 100%);
+  mask-composite: intersect;
 }
 
 .hero__bamboo {
@@ -443,7 +462,7 @@ h3 {
   position: absolute;
   left: 50%;
   top: 62%;
-  z-index: 2;
+  z-index: 3;
   width: 18px;
   height: 44px;
   border-left: 1px solid rgba(107, 79, 58, 0.32);
