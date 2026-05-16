@@ -1023,16 +1023,43 @@ address a:hover {
 
 .venue-photo-grid {
   display: grid;
-  gap: 14px;
+  gap: 22px;
 }
 
-.venue-photo-grid img {
+.venue-photo {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.venue-photo img {
   width: 100%;
   height: 240px;
   border: 1px solid var(--color-line);
   border-radius: var(--radius);
   object-fit: cover;
   object-position: center;
+  background: var(--color-kinari);
+}
+
+.venue-photo figcaption {
+  color: var(--color-sub);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+}
+
+.venue-access {
+  margin: 10px 0 2px;
+}
+
+.venue-access img {
+  display: block;
+  width: min(100%, 360px);
+  height: auto;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
   background: var(--color-kinari);
 }
 
@@ -1340,11 +1367,7 @@ address a {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .venue-photo-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .venue-photo-grid img {
+  .venue-photo img {
     height: clamp(220px, 24vw, 300px);
   }
 
