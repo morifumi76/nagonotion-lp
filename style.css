@@ -481,8 +481,8 @@ h3 {
 
 .hero-steam {
   position: absolute;
-  left: 50%;
-  top: 62%;
+  left: 50.5%;
+  top: 56%;
   z-index: 3;
   width: 18px;
   height: 44px;
