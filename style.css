@@ -741,6 +741,36 @@ h3 {
 
 .step-flow .is-goal {
   border-color: var(--color-shu);
+  /* モバイルでは 02→03 の間に橋渡しラベルの居場所を空ける */
+  margin-top: 36px;
+}
+
+/* 02→03 の橋渡しラベル（図中で「なごNotionの価値の位置」を示す） */
+.step-bridge {
+  position: absolute;
+  left: 50%;
+  top: -28px;
+  transform: translateX(-50%);
+  color: var(--color-shu);
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* カードを1枚ずつ時間差でフェードイン */
+.step-flow li.reveal:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.step-flow li.reveal:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.step-flow li.reveal:nth-child(4) {
+  transition-delay: 0.3s;
 }
 
 .bridge-note {
@@ -1428,51 +1458,82 @@ address a {
     gap: 76px;
   }
 
+  /* 階段式レイアウト: 右のカードほど一段高く（成長の視覚化） */
   .step-flow {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0;
+    gap: 26px;
+    align-items: start;
+    padding-bottom: 48px;
   }
 
   .step-flow li {
     min-height: 180px;
     padding: 24px 22px;
-    border-radius: 0;
-    border-right: 0;
   }
 
-  .step-flow li:first-child {
-    border-radius: var(--radius) 0 0 var(--radius);
+  .step-flow li:nth-child(1) {
+    margin-top: 54px;
   }
 
-  .step-flow li:last-child {
-    border-right: 1px solid var(--color-line);
-    border-radius: 0 var(--radius) var(--radius) 0;
+  .step-flow li:nth-child(2) {
+    margin-top: 36px;
   }
 
+  .step-flow li:nth-child(3) {
+    margin-top: 18px;
+  }
+
+  .step-flow li:nth-child(4) {
+    margin-top: 0;
+  }
+
+  /* カード間の連結矢印は斜め上向きのグリフに */
   .step-flow li::before {
+    content: "↗";
     left: auto;
-    right: -16px;
+    right: -25px;
     top: 50%;
-    width: 30px;
-    height: 1px;
-    z-index: 1;
-    transform: none;
+    bottom: auto;
+    width: auto;
+    height: auto;
+    background: none;
+    color: var(--color-sumi-70);
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    transform: translateY(-50%);
   }
 
   .step-flow li::after {
-    left: auto;
-    right: -16px;
-    top: calc(50% - 4px);
-    bottom: auto;
-    border-top: 1px solid var(--color-sumi-70);
-    border-right: 1px solid var(--color-sumi-70);
-    border-bottom: 0;
-    z-index: 1;
+    content: none;
   }
 
-  .step-flow li:last-child::before,
-  .step-flow li:last-child::after {
+  .step-flow .is-current::before {
+    background: none;
+    color: var(--color-shu);
+  }
+
+  .step-flow li:last-child::before {
     content: none;
+  }
+
+  /* 橋渡しラベルは 02↗03 の継ぎ目の下に */
+  .step-bridge {
+    left: -13px;
+    top: auto;
+    bottom: -44px;
+    font-size: 13px;
+  }
+
+  .step-bridge::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -16px;
+    width: 1px;
+    height: 12px;
+    background: var(--color-shu-soft);
   }
 
   .map-wrap,
