@@ -969,6 +969,8 @@ h3 {
   background: var(--color-kinari);
   color: var(--color-sub);
   font-size: 14px;
+  /* 1文字だけの折り返しを防ぎ、2行になる場合は均等に分割する */
+  text-wrap: balance;
 }
 
 .character-callout p::before {
