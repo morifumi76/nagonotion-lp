@@ -993,6 +993,45 @@ h3 {
   border-bottom: 0;
 }
 
+/* 吹き出しの「発言」演出:
+   キャラクターが先にふわっと現れ、吹き出しが尻尾側からぽんっと膨らむ */
+.character-callout.reveal {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.character-callout.reveal .character-sprite {
+  opacity: 0;
+  translate: 0 8px;
+  transition:
+    opacity 0.4s ease,
+    translate 0.4s ease;
+}
+
+.character-callout.reveal p {
+  opacity: 0;
+  scale: 0.6;
+  transform-origin: left bottom;
+  transition:
+    opacity 0.35s ease 0.3s,
+    scale 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s;
+}
+
+.character-callout-reverse.reveal p {
+  transform-origin: right bottom;
+}
+
+.character-callout.reveal.is-visible .character-sprite {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.character-callout.reveal.is-visible p {
+  opacity: 1;
+  scale: 1;
+}
+
 @keyframes sprite-4-gesture {
   0%,
   24.99% {
