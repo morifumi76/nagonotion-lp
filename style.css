@@ -334,6 +334,66 @@ h3 {
   letter-spacing: 0.12em;
 }
 
+/* スクリーンリーダー専用テキスト */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 見出し2行: 墨が紙ににじむようにぼかしが解けながら登場 */
+.hero__headline-sub {
+  opacity: 0;
+  animation: headline-ink-in 0.8s ease forwards;
+}
+
+.hero__headline-sub:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+@keyframes headline-ink-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+    filter: blur(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* ブランド名: 1文字ずつ下から弾んで登場（JSで分割された場合のみ） */
+.hero-brand-char {
+  display: inline-block;
+  opacity: 0;
+  animation: brand-char-pop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes brand-char-pop {
+  from {
+    opacity: 0;
+    transform: translateY(0.35em) scale(0.85);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .hero__lede {
   max-width: 560px;
   margin-top: 32px;
@@ -909,6 +969,8 @@ h3 {
   background: var(--color-kinari);
   color: var(--color-sub);
   font-size: 14px;
+  /* 1文字だけの折り返しを防ぎ、2行になる場合は均等に分割する */
+  text-wrap: balance;
 }
 
 .character-callout p::before {
@@ -931,6 +993,45 @@ h3 {
   border-top: 1px solid var(--color-line);
   border-left: 0;
   border-bottom: 0;
+}
+
+/* 吹き出しの「発言」演出:
+   キャラクターが先にふわっと現れ、吹き出しが尻尾側からぽんっと膨らむ */
+.character-callout.reveal {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.character-callout.reveal .character-sprite {
+  opacity: 0;
+  translate: 0 8px;
+  transition:
+    opacity 0.4s ease,
+    translate 0.4s ease;
+}
+
+.character-callout.reveal p {
+  opacity: 0;
+  scale: 0.6;
+  transform-origin: left bottom;
+  transition:
+    opacity 0.35s ease 0.3s,
+    scale 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s;
+}
+
+.character-callout-reverse.reveal p {
+  transform-origin: right bottom;
+}
+
+.character-callout.reveal.is-visible .character-sprite {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.character-callout.reveal.is-visible p {
+  opacity: 1;
+  scale: 1;
 }
 
 @keyframes sprite-4-gesture {
