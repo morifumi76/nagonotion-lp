@@ -573,6 +573,33 @@
       </div>
     </footer>
     <script>
+      // ブランド名「なごNotion」を1文字ずつ分割してぽんっと登場させる
+      // （reduced-motion時とJS無効時は通常表示のまま）
+      (() => {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        const brand = document.querySelector(".hero__headline-brand");
+        if (!brand) return;
+
+        const text = brand.textContent.trim();
+        brand.textContent = "";
+
+        // 読み上げ用に元テキストを不可視で保持
+        const srText = document.createElement("span");
+        srText.className = "sr-only";
+        srText.textContent = text;
+        brand.appendChild(srText);
+
+        [...text].forEach((char, i) => {
+          const span = document.createElement("span");
+          span.className = "hero-brand-char";
+          span.textContent = char;
+          span.setAttribute("aria-hidden", "true");
+          span.style.animationDelay = `${0.4 + i * 0.07}s`;
+          brand.appendChild(span);
+        });
+      })();
+
       const revealItems = document.querySelectorAll(".section:not(.hero), .feature-card, .recommend-list article, .profile-card, .detail-list div, .faq-item, .step-flow li, .venue-access, .venue-photo");
 
       revealItems.forEach((item) => {
