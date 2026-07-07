@@ -267,6 +267,8 @@
               <p>使ってはいるが周りが言うほどの利便性を実感できていない</p>
             </li>
             <li class="is-goal">
+              <!-- 図中の橋渡しラベル（同内容の説明は下の bridge-note にあるため装飾扱い） -->
+              <span class="step-bridge" aria-hidden="true">なごNotionが橋渡し</span>
               <span class="step-number">03</span>
               <strong>使えてる</strong>
               <p>他では体験できなかった便利さを実感している</p>
@@ -571,7 +573,7 @@
       </div>
     </footer>
     <script>
-      const revealItems = document.querySelectorAll(".section:not(.hero), .feature-card, .recommend-list article, .profile-card, .detail-list div, .faq-item");
+      const revealItems = document.querySelectorAll(".section:not(.hero), .feature-card, .recommend-list article, .profile-card, .detail-list div, .faq-item, .step-flow li");
 
       revealItems.forEach((item) => {
         item.classList.add("reveal");
