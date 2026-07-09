@@ -976,6 +976,12 @@ h3 {
   display: inline-block;
 }
 
+/* 長文の吹き出しは最初から行を確定させ、箱を一番長い行にぴったり沿わせる
+   （折り返し任せだと箱の幅が折り返し前の寸法で残ってしまうため） */
+.bubble-multiline .bubble-seg {
+  display: block;
+}
+
 .character-callout p::before {
   content: "";
   position: absolute;
