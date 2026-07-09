@@ -969,8 +969,11 @@ h3 {
   background: var(--color-kinari);
   color: var(--color-sub);
   font-size: 14px;
-  /* 1文字だけの折り返しを防ぎ、2行になる場合は均等に分割する */
-  text-wrap: balance;
+}
+
+/* 吹き出し文言の意味のまとまり。この単位でのみ折り返し、箱はテキストに沿う */
+.bubble-seg {
+  display: inline-block;
 }
 
 .character-callout p::before {
