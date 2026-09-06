@@ -430,7 +430,7 @@ h3 {
   font-weight: 700;
 }
 
-/* 次回開催が未定のときのお知らせ文 */
+/* 次回開催が未定のときのお知らせ文（日程未定の期間だけ index.html で使う） */
 .hero__notice {
   margin-top: 20px;
   color: var(--color-text-mute);
